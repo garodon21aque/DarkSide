@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Components/AttributeComponent.h"
 #include "DarkSideCharacter.generated.h"
 
 UCLASS(Blueprintable)
@@ -14,6 +15,8 @@ class ADarkSideCharacter : public ACharacter
 public:
 	ADarkSideCharacter();
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
+		class UAttributeComponent* PlayerAttributes;
 	// Called every frame.
 	virtual void Tick(float DeltaSeconds) override;
 

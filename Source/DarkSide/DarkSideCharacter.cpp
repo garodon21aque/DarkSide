@@ -43,6 +43,8 @@ ADarkSideCharacter::ADarkSideCharacter()
 	// Activate ticking in order to update the cursor every frame.
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
+
+	PlayerAttributes = CreateDefaultSubobject<UAttributeComponent>("PlayerAttributes");
 }
 
 void ADarkSideCharacter::Tick(float DeltaSeconds)
