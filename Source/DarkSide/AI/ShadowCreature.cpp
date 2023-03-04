@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "AI/ShadowCreature.h"
+#include "ShadowCreature.h"
 
 // Sets default values
 AShadowCreature::AShadowCreature()
