@@ -3,7 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
 #include "GameFramework/Actor.h"
+#include "Components/PointLightComponent.h"
 #include "LightSource.h"
 #include "ShadowSpawner.generated.h"
 
@@ -15,9 +17,10 @@ class DARKSIDE_API AShadowSpawner : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AShadowSpawner();
+	
 
-	UPROPERTY(BlueprintReadWrite, Category = "Light")
-		class ALightSource* LightSource;
+//	UPROPERTY(BlueprintReadWrite, Category = "Light")
+	//	class ALightSource* LightSource;
 
 	UPROPERTY(BlueprintReadWrite, Category = "Spawner")
 		bool SpawnerActive;
@@ -25,8 +28,10 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+private:
+	
 };
